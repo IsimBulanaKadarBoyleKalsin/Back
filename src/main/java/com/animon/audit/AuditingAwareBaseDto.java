@@ -10,13 +10,12 @@ import java.util.Date;
 @Setter
 public class AuditingAwareBaseDto implements Serializable {
 
-    // Serileştirme
     public static final Long serialVersionUID=1L;
 
     // AUDITING
     // Kim ekledi
     // @JsonIgnore // Backte giden veride bunu göstermemek için kullanılır.
-    protected String createdUser;
+    protected String createdBy;
 
     // Kim ne zaman ekledi
     // @JsonIgnore // Backte giden veride bunu göstermemek için kullanılır.
@@ -24,9 +23,9 @@ public class AuditingAwareBaseDto implements Serializable {
 
     // Kim güncelledi
     // @JsonIgnore // Backte giden veride bunu göstermemek için kullanılır.
-    protected String lastUser;
+    protected String lastModifiedBy;
 
     // Kim ne zaman güncelledi
     // @JsonIgnore // Backte giden veride bunu göstermemek için kullanılır.
-    protected Date lastDate;
+    protected Date lastModifiedDate;
 }
